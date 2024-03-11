@@ -1,7 +1,5 @@
 # Import variables set-up by dwl into the environment and notify systemd that
 # dwl is ready.
-if [ -n "$NOTIFY_SOCKET" ]; then
-	systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XCURSOR_SIZE XCURSOR_THEME 
-	systemd-notify --ready
-fi
+systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XCURSOR_SIZE XCURSOR_THEME 
+systemd-notify --ready
 
