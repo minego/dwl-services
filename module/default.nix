@@ -2,7 +2,7 @@
 with lib;
 
 {
-	systemd.services = {
+	systemd.user.services = {
 		"dwl" = {
 			description				= "DWL";
 			serviceConfig = {
