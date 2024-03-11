@@ -1,14 +1,14 @@
-# sway-services
+# dwl-services
 
 A collection of tools, utilities and mostly unit files to handle a systemd-user
-sway session.
+dwl session.
 
-Usage: run `Sway Service` from your desktop manager or run `sway-user-service`.
+Usage: run `DWL Service` from your desktop manager or run `dwl-user-service`.
 
 ## Provided targets
 
-* `sway-session.target`
-* `sway-session-pre.target`
+* `dwl-session.target`
+* `dwl-session-pre.target`
 * `wayland-session.target`
 * `wayland-session-pre.target`
 
@@ -17,14 +17,10 @@ wayland exclusive services
 
 ## Provided services
 
-* `sway.service`
-* `kanshi.service`
-* `oguri.service`
-* `swayidle.service`
+* `dwl.service`
 
 ## Notes
 
-The `/etc/sway/config.d/10-service.conf` file must be loaded by sway.
+The `dwl-ready` command must be run by dwl when it is loaded and ready, to
+inform systemd that the unit has succeeded.
 
-`swayidle.service` will load a configuration file, an example can be found in
-`examples/idle.yaml` in this repository

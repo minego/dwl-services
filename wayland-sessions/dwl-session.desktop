@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=DWL Service
+Comment=DWL
+Exec=dwl-user-service
+Type=Application

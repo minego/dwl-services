@@ -1,9 +1,8 @@
-project('sway-services',
+project('dwl-services',
   [],
   meson_version: '>=0.49'
 )
 
 subdir('bin')
-subdir('config')
 subdir('systemd')
 subdir('wayland-sessions')

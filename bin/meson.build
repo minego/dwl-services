@@ -1,6 +1,6 @@
 bins = [
-  'sway-user-service',
-  'swayidle-conf',
+  'dwl-user-service',
+  'dwl-ready',
 ]
 
 install_data(bins, install_dir: 'bin')
