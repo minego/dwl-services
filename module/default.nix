@@ -9,7 +9,7 @@ with lib;
 				Type				= "notify";
 				ExecStart			= "${pkgs.dwl}/bin/dwl";
 				NotifyAccess		= "all";
-				ExecStopPost		= "/usr/bin/systemctl --user unset-environment DISPLAY WAYLAND_DISPLAY";
+				ExecStopPost		= "systemctl --user unset-environment DISPLAY WAYLAND_DISPLAY";
 			};
 		};
 	};

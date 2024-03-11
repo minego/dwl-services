@@ -9,4 +9,4 @@ Before=dwl-session.target
 Type=notify
 ExecStart=dwl
 NotifyAccess=all
-ExecStopPost=/usr/bin/systemctl --user unset-environment DISPLAY WAYLAND_DISPLAY
+ExecStopPost=systemctl --user unset-environment DISPLAY WAYLAND_DISPLAY
