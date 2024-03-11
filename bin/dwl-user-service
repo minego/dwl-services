@@ -20,20 +20,5 @@ done
 source /etc/profile
 
 export XDG_CURRENT_DESKTOP=wlroots
-
-# save environment variables that will be added to systemd
-new_env=$(systemctl --user show-environment | cut -d'=' -f 1 | sort | comm -13 - <(env | grep -v "^_" | cut -d'=' -f 1 | sort))
-
-# ${new_env} contains each environment variable on a line by itself - Replace the
-# newlines with spaces
-import_env="${new_env//$'\n'/ }"
-
-# import environment variables from the login manager
-systemctl --user import-environment "$import_env"
-
-# then start the service
 systemctl --wait --user start dwl.service
-
-# cleanup environment
-systemctl --user unset-environment "$import_env"
 
