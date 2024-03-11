@@ -38,6 +38,10 @@
 	//
 	{
 		overlays.default			= overlay;
+
+		nixosModules = {
+			default = ./module;
+		};
 	};
 }
 
