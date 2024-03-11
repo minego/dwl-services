@@ -7,7 +7,7 @@ with lib;
 			description				= "DWL";
 			serviceConfig = {
 				Type				= "notify";
-				ExecStart			= "dwl";
+				ExecStart			= "${pkgs.dwl}/bin/dwl";
 				Restart				= "on-failure";
 				RestartSec			= 1;
 				TimeoutStopSec		= 10;
