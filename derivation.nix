@@ -33,6 +33,8 @@ stdenv.mkDerivation {
 	installPhase = ''
 		meson install -C build
 	'';
+
+	passthru.providedSessions = [ "dwl-session" ];
 }
 
 
