@@ -16,6 +16,21 @@ with lib;
 		};
 
 		targets = {
+			dwl = {
+				description				= "DWL";
+				bindsTo					= [ "dwl-session.target" ];
+				before					= [ "dwl-session.target" ];
+				want					= [ "dwl-session-pre.target" ];
+				after					= [ "dwl-session-pre.target" ];
+
+				unitConfig = {
+					RefuseManualStart	= true;
+					StopWhenUnneeded	= true;
+				};
+			};
+
+
+
 			dwl-session = {
 				description				= "Current DWL user session";
 				requires				= [ "basic.target" ];
