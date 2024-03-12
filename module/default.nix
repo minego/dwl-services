@@ -14,14 +14,9 @@ with lib;
 				};
 
 				bindsTo					= [ "dwl-session.target" ];
-				before					= [ "dwl-session.target" ];
 				wants					= [ "dwl-session-pre.target" ];
+				before					= [ "dwl-session.target" ];
 				after					= [ "dwl-session-pre.target" ];
-
-				unitConfig = {
-					RefuseManualStart	= true;
-					StopWhenUnneeded	= true;
-				};
 			};
 		};
 
