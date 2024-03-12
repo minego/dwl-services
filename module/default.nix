@@ -12,12 +12,7 @@ with lib;
 					NotifyAccess		= "all";
 					ExecStopPost		= "systemctl --user unset-environment DISPLAY WAYLAND_DISPLAY";
 				};
-			};
-		};
 
-		targets = {
-			dwl = {
-				description				= "DWL";
 				bindsTo					= [ "dwl-session.target" ];
 				before					= [ "dwl-session.target" ];
 				wants					= [ "dwl-session-pre.target" ];
@@ -28,9 +23,9 @@ with lib;
 					StopWhenUnneeded	= true;
 				};
 			};
+		};
 
-
-
+		targets = {
 			dwl-session = {
 				description				= "Current DWL user session";
 				requires				= [ "basic.target" ];
