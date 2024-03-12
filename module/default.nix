@@ -20,7 +20,7 @@ with lib;
 				description				= "DWL";
 				bindsTo					= [ "dwl-session.target" ];
 				before					= [ "dwl-session.target" ];
-				want					= [ "dwl-session-pre.target" ];
+				wants					= [ "dwl-session-pre.target" ];
 				after					= [ "dwl-session-pre.target" ];
 
 				unitConfig = {
